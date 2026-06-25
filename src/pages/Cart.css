@@ -1,0 +1,88 @@
+.cart-empty { min-height: 70vh; display: flex; align-items: center; justify-content: center; background: var(--bg); }
+.cart-empty-inner { text-align: center; }
+.cart-empty-icon { font-size: 4rem; margin-bottom: 1rem; }
+.cart-empty-inner h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin: 0 0 0.5rem; }
+.cart-empty-inner p { color: var(--text-muted); margin: 0 0 1.75rem; }
+.btn-shop {
+  padding: 0.8rem 2rem;
+  background: var(--gold);
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 800;
+  box-shadow: 0 0 20px rgba(212,175,55,0.25);
+}
+
+.cart-page { padding: 2.5rem 1.5rem; background: var(--bg); min-height: 100vh; }
+.cart-inner { max-width: 1100px; margin: 0 auto; }
+.cart-title { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; margin-bottom: 1.75rem; }
+
+.cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 2rem; align-items: start; }
+
+.cart-items { display: flex; flex-direction: column; gap: 0.75rem; }
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+.cart-item:hover { border-color: var(--border-hover); }
+.cart-item-img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; background: var(--bg3); flex-shrink: 0; }
+.cart-item-info { flex: 1; }
+.cart-item-name { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.2rem; color: var(--text); }
+.cart-item-cat { font-size: 0.72rem; color: var(--gold); display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+.cart-item-price { font-size: 0.9rem; color: var(--gold); font-weight: 700; }
+
+.cart-item-controls { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+.qty-row { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg3); }
+.qty-row button { padding: 0.4rem 0.7rem; background: transparent; border: none; font-size: 1rem; cursor: pointer; color: var(--text); transition: background 0.15s; }
+.qty-row button:hover { background: rgba(212,175,55,0.1); }
+.qty-row span { padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.9rem; color: var(--text); }
+.cart-item-subtotal { font-size: 1rem; font-weight: 800; color: var(--gold); }
+.btn-remove { background: none; border: none; cursor: pointer; font-size: 1.1rem; opacity: 0.3; transition: opacity 0.15s; }
+.btn-remove:hover { opacity: 0.8; }
+
+.cart-summary {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  position: sticky;
+  top: 88px;
+}
+.cart-summary h2 { font-size: 1rem; font-weight: 800; margin: 0 0 1.5rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); }
+.summary-rows { display: flex; flex-direction: column; gap: 0.75rem; }
+.summary-row { display: flex; justify-content: space-between; font-size: 0.92rem; color: var(--text-muted); }
+.summary-row.total { font-size: 1.15rem; font-weight: 800; color: var(--text); }
+.summary-divider { border: none; border-top: 1px solid var(--border); margin: 0.3rem 0; }
+.summary-hint { font-size: 0.78rem; color: var(--gold); background: rgba(212,175,55,0.08); padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); }
+.free { color: #22c55e; font-weight: 700; }
+
+.btn-checkout {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: opacity 0.15s, transform 0.1s;
+  box-shadow: 0 0 25px rgba(212,175,55,0.25);
+  letter-spacing: 0.3px;
+}
+.btn-checkout:hover { opacity: 0.88; transform: scale(0.99); }
+.btn-continue { display: block; text-align: center; margin-top: 0.85rem; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+.btn-continue:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .cart-layout { grid-template-columns: 1fr; }
+  .cart-summary { position: static; }
+}
