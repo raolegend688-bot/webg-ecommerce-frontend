@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: process.env.REACT_APP_API_URL || "/api" });
+const API = axios.create({ baseURL: "https://webg-ecommerce-backend.onrender.com/api" });
 
 // Attach JWT token to every request if present
 API.interceptors.request.use((config) => {
